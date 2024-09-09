@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Motorcyclists Questionnaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Commercial Motorcyclists Questionnaire</h1>
+    <form>
+        <div class="question">
+            <label>1. How long have you been working as a commercial motorcyclist in Sumaila L.G.A?</label>
+            <input type="number" min="0.5" step="0.5" required> years
+        </div>
+
+        <div class="question">
+            <label>2. On average, how many hours do you work per day?</label>
+            <input type="number" min="1" max="24" required> hours
+        </div>
+
+        <div class="question">
+            <label>3. Have you ever been involved in a road traffic accident while working?</label>
+            <input type="radio" name="accident" value="yes" required> Yes
+            <input type="radio" name="accident" value="no" required> No
+        </div>
+
+        <div class="question">
+            <label>4. If yes, how many accidents have you been involved in in the past 12 months?</label>
+            <input type="number" min="0" required>
+        </div>
+
+        <div class="question">
+            <label>5. What type of accidents have you been involved in or witnessed? (Select all that apply)</label>
+            <input type="checkbox" name="accident_type" value="collision"> Collision with another vehicle
+            <input type="checkbox" name="accident_type" value="pedestrian"> Collision with a pedestrian
+            <input type="checkbox" name="accident_type" value="obstacle"> Collision with a stationary obstacle
+            <input type="checkbox" name="accident_type" value="skidding"> Skidding or losing control
+            <input type="checkbox" name="accident_type" value="other"> Other (please specify):
+            <input type="text" name="accident_type_other">
+        </div>
+
+        <div class="question">
+            <label>6. In your opinion, what are the main factors contributing to road traffic accidents involving commercial motorcyclists? (Select all that apply)</label>
+            <input type="checkbox" name="factors" value="speeding"> Speeding
+            <input type="checkbox" name="factors" value="alcohol"> Alcohol or drug use
+            <input type="checkbox" name="factors" value="fatigue"> Fatigue or drowsiness
+            <input type="checkbox" name="factors" value="road_condition"> Poor road conditions
+            <input type="checkbox" name="factors" value="weather"> Adverse weather conditions
+            <input type="checkbox" name="factors" value="vehicle_condition"> Poor vehicle condition
+            <input type="checkbox" name="factors" value="inexperience"> Inexperience or lack of training
+            <input type="checkbox" name="factors" value="traffic_violation"> Traffic law violations
+            <input type="checkbox" name="factors" value="other"> Other (please specify):
+            <input type="text" name="factors_other">
+        </div>
+
+        <div class="question">
+            <label>7. Are you aware of any road safety measures implemented for commercial motorcyclists in Sumaila L.G.A?</label>
+            <input type="radio" name="safety_measures" value="yes" required> Yes
+            <input type="radio" name="safety_measures" value="no" required> No
+        </div>
+
+        <div class="question">
+            <label>8. If yes, please list the road safety measures you are aware of:</label>
+            <textarea rows="4"></textarea>
+        </div>
+
+        <div class="question">
+            <label>9. How effective do you think these road safety measures are in reducing accidents?</label>
+            <select required>
+                <option value="">Select an option</option>
+                <option value="very_effective">Very effective</option>
+                <option value="somewhat_effective">Somewhat effective</option>
+                <option value="not_effective">Not effective</option>
+                <option value="unsure">Unsure</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>10. What suggestions do you have for improving road safety for commercial motorcyclists in Sumaila L.G.A?</label>
+            <textarea rows="4" required></textarea>
+        </div>
+    </form>
+</body>
+</html>
